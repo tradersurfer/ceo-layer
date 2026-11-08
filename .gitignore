@@ -1,0 +1,10 @@
+.env
+.env.*
+*.pyc
+__pycache__/
+local-business/
+private/
+*.mp4
+*.jpg
+*.jpeg
+*.png

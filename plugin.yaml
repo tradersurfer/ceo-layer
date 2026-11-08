@@ -1,0 +1,25 @@
+name: ceo-pack
+version: 0.3.0
+description: CEO Pack — a CEO orchestration layer for Hermes. Brief, route, plan, assign, call, verify, log. One owner and one due date per task, Type 1 / Type 2 decision gating, credential-safe tool calls, and owner approval for external actions. Hermes is the COO. Free model default is Nemotron 3 Ultra free, with top-ranked free and paid models the user can choose from.
+author: tradersurfer93
+license: MIT
+requires_hermes: ">=0.21.5"
+provides_tools:
+  - ceo_brief
+  - ceo_assign
+  - ceo_decision_log
+  - ceo_route
+  - q4_closeout_checklist
+  - ceo_orchestrate
+  - ceo_choose_model
+  - ceo_tool_call
+  - ceo_verify
+provides_hooks:
+  - post_tool_call
+config_schema:
+  business_name: {type: str, default: "", label: "Business name", description: "Your business name, entered on install. Nothing is shipped with the plugin."}
+  owner_name: {type: str, default: "", label: "Owner name", description: "The human owner who approves external actions."}
+  approval_required: {type: bool, default: true, label: "Require owner approval for external actions"}
+  model_choice: {type: str, default: "free_default", label: "Model choice", description: "free_default (Nemotron 3 Ultra free), free_fallback (GLM Flash free), free_worker, paid_value, or paid_flagship. Free lineups change — verify live."}
+  model_provider: {type: str, default: "auto", label: "Model provider", description: "openrouter, zen, nous, or auto."}
+  cost_mode: {type: str, default: "free", label: "Cost mode", description: "free, paid_value, or paid_flagship. Paid flagship is an override, not a default."}
