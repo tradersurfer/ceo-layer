@@ -1,9 +1,9 @@
 name: ceo-pack
 version: 0.3.0
-description: CEO Pack — a CEO orchestration layer for Hermes. Brief, route, plan, assign, call, verify, log. One owner and one due date per task, Type 1 / Type 2 decision gating, credential-safe tool calls, and owner approval for external actions. Hermes is the COO. Free model default is Nemotron 3 Ultra free, with top-ranked free and paid models the user can choose from.
+description: CEO Pack — a CEO orchestration layer for Hermes. Brief, route, plan, assign, call, verify, log, with Hermes as COO. One owner and one due date per task, Type 1 / Type 2 decision gating, credential-safe tool calls, and owner approval for external actions. Free model default is Nemotron 3 Ultra free, with GLM Flash free fallback and paid Claude Sonnet 5.5 / Opus 5.5 overrides the user chooses. The plugin returns model choices; it does not call a model itself (stdlib-only, catalog-safe).
 author: tradersurfer93
 license: MIT
-requires_hermes: ">=0.21.5"
+requires_hermes: ">=0.21.6"
 provides_tools:
   - ceo_brief
   - ceo_assign
