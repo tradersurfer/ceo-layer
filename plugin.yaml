@@ -1,6 +1,6 @@
 name: ceo-pack
-version: 0.3.0
-description: CEO Pack — a CEO orchestration layer for Hermes. Brief, route, plan, assign, call, verify, log, with Hermes as COO. One owner and one due date per task, Type 1 / Type 2 decision gating, credential-safe tool calls, and owner approval for external actions. Free model default is Nemotron 3 Ultra free, with GLM Flash free fallback and paid Claude Sonnet 5.5 / Opus 5.5 overrides the user chooses. The plugin returns model choices; it does not call a model itself (stdlib-only, catalog-safe).
+version: 0.4.0
+description: CEO Pack — a CEO orchestration layer for Hermes. Brief, route, plan, assign, call, verify, log, with Hermes as COO. One owner and one due date per task, Type 1 / Type 2 decision gating, credential-safe tool calls, and owner approval for external actions. v0.4.0 adds seat aliases (promote your agents to the C-Suite), head CEO config, capability checks, 9 new slash commands, and a hardened router and verifier. Free model default is Nemotron 3 Ultra free, with GLM Flash free fallback and paid Claude Sonnet 5.5 / Opus 5.5 overrides the user chooses. The plugin returns model choices; it does not call a model itself (stdlib-only, catalog-safe).
 author: tradersurfer93
 license: MIT
 requires_hermes: ">=0.21.6"
@@ -14,6 +14,11 @@ provides_tools:
   - ceo_choose_model
   - ceo_tool_call
   - ceo_verify
+  - ceo_closeout_checklist
+  - ceo_daily_check
+  - ceo_performance_check
+  - ceo_status_check
+  - ceo_roster
 provides_hooks:
   - post_tool_call
 config_schema:
@@ -23,3 +28,13 @@ config_schema:
   model_choice: {type: str, default: "free_default", label: "Model choice", description: "free_default (Nemotron 3 Ultra free), free_fallback (GLM Flash free), free_worker, paid_value, or paid_flagship. Free lineups change — verify live."}
   model_provider: {type: str, default: "auto", label: "Model provider", description: "openrouter, zen, nous, or auto."}
   cost_mode: {type: str, default: "free", label: "Cost mode", description: "free, paid_value, or paid_flagship. Paid flagship is an override, not a default."}
+  head_seat: {type: str, default: "CEO", label: "Head seat", description: "The seat that holds priorities and the decision log. Default CEO. The human owner is still the final approval gate."}
+  head_profile: {type: str, default: "", label: "Head profile", description: "Optional Hermes profile bound to the head seat. Empty uses the reference agent."}
+  alias_ceo: {type: str, default: "", label: "CEO display name", description: "Optional display name for the CEO seat, e.g. Billy. Empty uses CEO."}
+  alias_cfo: {type: str, default: "", label: "CFO display name", description: "Optional display name for the CFO seat."}
+  alias_coo: {type: str, default: "", label: "COO display name", description: "Optional display name for the COO seat, e.g. Poseidon. Empty uses COO (Hermes)."}
+  alias_cto: {type: str, default: "", label: "CTO display name", description: "Optional display name for the CTO seat."}
+  alias_cmo: {type: str, default: "", label: "CMO display name", description: "Optional display name for the CMO seat."}
+  alias_clo: {type: str, default: "", label: "CLO display name", description: "Optional display name for the CLO seat."}
+  alias_chief_of_staff: {type: str, default: "", label: "Chief of Staff display name", description: "Optional display name for the Chief of Staff seat."}
+  alias_cro: {type: str, default: "", label: "CRO display name", description: "Optional display name for the CRO seat."}

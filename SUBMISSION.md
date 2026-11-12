@@ -1,7 +1,7 @@
 # CEO Pack — hackathon submission pack
 
 Prepared Nov 5, 2026. NOT submitted. Nothing here pushes to GitHub or opens a PR.
-Still gated: Adrian's live Hermes Mobile verification (doctor / validate / tests /
+Still gated: the owner's live Hermes Mobile verification (doctor / validate / tests /
 demo + model check) must come back and be reviewed first. Only then: approve,
 push, test 20x back-to-back, report back.
 
@@ -18,7 +18,7 @@ push, test 20x back-to-back, report back.
 
 ## Submit in this order
 
-1. Public repo (owned by Adrian / tradersurfer93 — catalog entries can only
+1. Public repo (owned by tradersurfer93 — catalog entries can only
    be submitted by the owner or a major contributor) containing this folder.
 2. Catalog PR to the `hermes-agent` repo, per the catalog submission guide:
    https://hermes-agent.nousresearch.com/docs/developer-guide/plugins/catalog-submission
@@ -52,7 +52,7 @@ push, test 20x back-to-back, report back.
 Film the exact path in `demo/demo_flow.py` (runs clean locally, stdlib-only,
 fictional inputs, no network, no credentials):
 
-- 0:00–0:10 — Install the plugin by name. Ask JECI for a Q4 closeout brief.
+- 0:00–0:10 — Install the plugin by name. Ask the CEO agent for a Q4 closeout brief.
 - 0:10–0:35 — Watch it delegate: ATLAS/CFO on books and tax prep,
   JUSTICE/CLO on entity and filings, HERMES/COO on coordination.
   Show the plan: Brief -> Route -> Plan -> Assign -> Call -> Verify -> Log.
@@ -94,5 +94,5 @@ day of submission.
   ceo_orchestrate, ceo_choose_model, ceo_tool_call, ceo_verify.
 - Orchestration: Brief -> Route -> Plan -> Assign -> Call -> Verify -> Log.
   Type 1 stops for owner approval; Type 2 proceeds fast.
-- No JECI Group business data, prices, locations, client data, personal
+- No business data, prices, locations, client data, personal
   names, portraits, credentials, or logs in the build (see PRIVACY.md).

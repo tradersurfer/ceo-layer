@@ -14,11 +14,24 @@ A CEO orchestration layer for Hermes — not a chat wrapper. Install it, name yo
 - `ceo_assign` — one task, one owner, one ISO due date, one known seat. Missing fields, bad dates, and unknown seats are errors, not silent defaults. A past due date warns.
 - `ceo_decision_log` — options, chosen option, reason, approval flag.
 - `q4_closeout_checklist` — generic year-end checklist: books, tax items, annual filings, entity cleanup, annual reporting. Checklist only, not tax or legal advice.
+- `ceo_closeout_checklist` — closeout for any quarter (Q1-Q4) or monthly, for bookkeeping and accounting.
+- `ceo_daily_check` — daily or end-of-day check: shipped, earned, stuck, decisions.
+- `ceo_performance_check` — employee performance review template (people = Type 1, owner approval).
+- `ceo_status_check` — status of a briefing, assignment, task, log, or plan, from the item supplied. Never invents a status.
+- `ceo_roster` — C-Suite roster view: seat, display name, bound profile, capabilities, gaps. The data for the install flow and the pinned CEO Dashboard.
 - `ceo_choose_model` — pick a model by job and budget, with fallbacks and limits.
 
 Tool-call rules: one tool at a time, check the JSON result before the next step, retry once with corrected arguments then escalate, never retry a write/send/payment blindly. Type 1 decisions (irreversible, priced, external, legal/financial, security, people, regulatory, reputation, outside authority) stop for the owner; Type 2 (reversible, low-cost, bounded) proceeds — step 4 is no longer blanket-gated. See `docs/ORCHESTRATION.md` and `CHANGELOG.md`.
 
-Slash commands: `/ceo`, `/q4`, and `/orchestrate`.
+Slash commands: `/ceo`, `/q4`, and `/orchestrate`, plus v0.4.0 shortcuts `/brief`, `/assign`, `/verify`, `/log`, `/decision`, `/route`, `/models`, `/weekly-pulse`, `/closeout`, `/q1`, `/q2`, `/q3`, `/monthly-closeout`, `/daily-checks`, `/eod-checks`, `/performance-checks`, `/status-check`, `/roster` (21 total).
+
+## v0.4.0 — promote your agents to the C-Suite
+
+- **Seat aliases:** rename a seat for display in install config, e.g. COO to Poseidon, CEO to Billy. Canonical seats never change, and logs show `Alias (Canonical)`. Bindings carry all three display fields — name, avatar, SOUL — display-only.
+- **Head CEO:** `head_seat` config (default CEO) picks the seat that holds priorities and the decision log; `head_profile` optionally binds a Hermes profile to it. The human owner is still the final Type 1 gate.
+- **Capability check:** each seat has a checklist in `orchestration.py`. `check_capabilities` lists what a bound profile is missing; `propose_capability_install` returns an owner-gated install plan. Declining leaves a name-only binding, flagged in plan and log.
+- **Opt-in business-data reading:** `create_business_data_opt_in` makes an ephemeral, chat-scoped opt-in naming exact fields, a purpose, and an expiry. Every read is audited, revoke is instant, and a fresh opt-in is required for any future read. Fictional-data test only.
+- **Hardened router and verifier:** see CHANGELOG.md. The Hermes live-test P0s are fixed and covered by 38 new tests in `tests/test_v040.py`.
 
 ## Model choice — free default, top-ranked options
 
@@ -28,7 +41,7 @@ Default is free, and the user can choose from the list in `models.py` / `docs/MO
 |---|---|
 | **Nemotron 3 Ultra free** (`nvidia/nemotron-3-ultra-550b-a55b:free`) | CEO default — 550B, 1M context, orchestration |
 | GLM Flash free (Zen) | Fast daily CEO fallback |
-| Nemotron 3.5 Lightning free / Ling 3.1 Flash (zero-priced) | Fast, narrow worker jobs — never the CEO seat. Ling 3.0 Flash is paid, not free — do not use that slug. |
+| Nemotron 3.5 Lightning free / Ling 3.1 Flash `:free` | Fast, narrow worker jobs — never the CEO seat. The bare `inclusionai/ling-3.1-flash` ID is paid, not free — use the `:free` variant only. |
 | `openrouter/free` | Random free fallback, tool-calling filtered |
 | Claude Sonnet 5.5 / GPT-6.1 Sol | Paid value, everyday frontier |
 | Claude Opus 5.5 | Paid flagship, high stakes only — override, not default |

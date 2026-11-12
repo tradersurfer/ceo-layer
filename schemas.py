@@ -183,3 +183,84 @@ CEO_VERIFY = {
         "required": ["tool_name", "result"],
     },
 }
+
+CEO_CLOSEOUT_CHECKLIST = {
+    "name": "ceo_closeout_checklist",
+    "description": (
+        "Return a closeout checklist for a quarter (Q1, Q2, Q3, Q4) or monthly, "
+        "for bookkeeping and accounting: books, tax items, filings, entity "
+        "cleanup, and reporting. Checklist only, not tax or legal advice."
+    ),
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "quarter": {"type": "string", "description": "Q1, Q2, Q3, Q4, or monthly. Default Q4."},
+            "year": {"type": "integer", "description": "The tax/reporting year, e.g. 2026."},
+            "entity_type": {"type": "string", "description": "Optional, e.g. LLC, corporation, sole proprietorship."},
+        },
+        "required": ["year"],
+    },
+}
+
+CEO_DAILY_CHECK = {
+    "name": "ceo_daily_check",
+    "description": (
+        "Daily check or end-of-day check: what shipped, what earned, what is "
+        "stuck, what needs a decision. A report, not an action."
+    ),
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "period": {"type": "string", "description": "daily or eod. Default daily."},
+            "date": {"type": "string", "description": "Optional ISO date YYYY-MM-DD."},
+        },
+        "required": ["period"],
+    },
+}
+
+CEO_PERFORMANCE_CHECK = {
+    "name": "ceo_performance_check",
+    "description": (
+        "Employee performance check: goals, wins, gaps, next steps. Template "
+        "only — the plugin holds no employee data. People decisions are "
+        "Type 1 and need owner approval."
+    ),
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "subject": {"type": "string", "description": "The person or seat being reviewed."},
+            "period": {"type": "string", "description": "Optional period, e.g. quarter. Default quarter."},
+            "metrics": {"type": "array", "items": {"type": "string"}, "description": "Optional metrics supplied by the owner."},
+        },
+        "required": ["subject"],
+    },
+}
+
+CEO_STATUS_CHECK = {
+    "name": "ceo_status_check",
+    "description": (
+        "Status of a briefing, assignment, task, log, plan, or run. The plugin "
+        "keeps no state, so pass the item's result (and tool_name to verify "
+        "it); without an item the status is honestly unknown."
+    ),
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "item_type": {"type": "string", "description": "brief, assignment, task, log, plan, or run."},
+            "reference": {"type": "string", "description": "Optional run_id or description of the item."},
+            "tool_name": {"type": "string", "description": "Optional tool that produced the result, to verify it."},
+            "result": {"type": ["object", "string"], "description": "The item's result to check."},
+        },
+        "required": ["item_type"],
+    },
+}
+
+CEO_ROSTER = {
+    "name": "ceo_roster",
+    "description": (
+        "C-Suite roster view: seat, display name, bound profile, capabilities "
+        "and gaps for every seat. The data for the install flow and the "
+        "pinned CEO Dashboard."
+    ),
+    "parameters": {"type": "object", "properties": {}, "required": []},
+}
