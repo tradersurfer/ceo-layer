@@ -1,5 +1,7 @@
 # CEO Pack
 
+![CEO Pack — v0.4.0 cover](assets/ceo-pack-cover-v040.webp)
+
 A CEO orchestration layer for Hermes — not a chat wrapper. Install it, name your CEO, tell it about your business on first run, and it briefs, routes, assigns, calls tools one at a time, verifies, and logs decisions — with Hermes as COO.
 
 ## Orchestration first
