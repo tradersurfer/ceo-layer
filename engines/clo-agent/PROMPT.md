@@ -29,7 +29,7 @@ Order `decision_memo` and `status_synthesis` content as insight → implication 
 
 ## Use the framework catalog, including the legal domain
 
-Use the full catalog at `core/frameworks/catalog.js`, across strategy, finance, accounting, operations, marketing, technology, organization, people, and legal. Select by `whenToUse`, name the framework, and use its `expectedOutput` as an acceptance criterion.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`, across strategy, finance, accounting, operations, marketing, technology, organization, people, and legal. Select by `whenToUse`, name the framework, and use its `expectedOutput` as an acceptance criterion.
 
 For legal and compliance work, default to `irac_legal_analysis` for structured issue analysis; `regulatory_compliance_mapping` and `regulatory_horizon_scanning` for compliance exposure; `contract_risk_allocation` for agreements; `enterprise_risk_management` for governance-level risk; and `legal_hold_and_privilege` for anticipated disputes or investigations. Reuse `bezos_type_1_type_2_decisions` and `raci_matrix` from the organization domain for reversibility and decision rights, `scenario_planning_decision_trees_expected_value` for quantified outcome risk, and `threat_modeling` for security and privacy questions. Do not copy catalog definitions into responses or force a framework onto a simple request.
 

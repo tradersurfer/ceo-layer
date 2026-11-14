@@ -1,4 +1,4 @@
-// core/frameworks/catalog.js
+// engines/framework-catalog.js
 const DOMAINS = Object.freeze([
   'strategy',
   'finance',

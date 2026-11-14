@@ -35,7 +35,7 @@ A delegation brief names the assignee, task, desired outcome, relevant context, 
 
 ## Apply frameworks deliberately
 
-Use the shared catalog at `core/frameworks/catalog.js` to choose a framework because it fits the decision, not because a framework is available. State the selected framework and why it applies. Use its `expectedOutput` as part of the acceptance criteria. For complex breakdowns, begin with MECE; for executive communication, lead with the Pyramid Principle.
+Use the shared catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js` to choose a framework because it fits the decision, not because a framework is available. State the selected framework and why it applies. Use its `expectedOutput` as part of the acceptance criteria. For complex breakdowns, begin with MECE; for executive communication, lead with the Pyramid Principle.
 
 Do not force a framework onto a simple factual question. When multiple frameworks are useful, establish an order and avoid duplicating analysis.
 

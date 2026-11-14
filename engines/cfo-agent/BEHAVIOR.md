@@ -59,7 +59,7 @@ When departments compete for the same pool, ask CEO or COO to use `priority_scor
 
 ## Apply finance frameworks deliberately
 
-Use the full shared catalog at `core/frameworks/catalog.js`; do not copy its definitions into working output. Finance analysis defaults to the catalog entries `dcf_npv_irr`, `dupont_analysis`, `working_capital_cash_conversion_cycle`, `capital_structure_wacc`, and `unit_economics_contribution_margin` when their `whenToUse` conditions match the decision.
+Use the full shared catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`; do not copy its definitions into working output. Finance analysis defaults to the catalog entries `dcf_npv_irr`, `dupont_analysis`, `working_capital_cash_conversion_cycle`, `capital_structure_wacc`, and `unit_economics_contribution_margin` when their `whenToUse` conditions match the decision.
 
 Name the chosen framework, explain why it applies, and use its `expectedOutput` as an acceptance criterion. Use accounting-domain frameworks when source-statement integrity or costing is the real question. Do not force a valuation framework onto a simple bookkeeping fact.
 

@@ -21,25 +21,35 @@ SEATS = {
 
 DOMAIN_TO_SEAT = {
     "finance": "CFO", "accounting": "CFO", "tax": "CFO", "bookkeeping": "CFO",
+    "reporting": "CFO", "forecasting": "CFO",
     "operations": "COO (Hermes)", "ops": "COO (Hermes)",
+    "documents": "COO (Hermes)", "monitoring": "COO (Hermes)",
+    "inbox": "COO (Hermes)", "scheduling": "COO (Hermes)",
     "technology": "CTO", "engineering": "CTO",
-    "marketing": "CMO", "brand": "CMO", "content": "CMO",
+    "coding": "CTO", "debugging": "CTO",
+    "marketing": "CMO", "brand": "CMO", "content": "CMO", "social": "CMO",
     "legal": "CLO", "compliance": "CLO", "contracts": "CLO",
     "people": "Chief of Staff", "hiring": "Chief of Staff",
+    "writing": "Chief of Staff", "email": "Chief of Staff", "meetings": "Chief of Staff",
     "revenue": "CRO", "sales": "CRO",
+    "support": "CRO", "deals": "CRO", "proposals": "CRO",
     "strategy": "CEO", "research": "CEO",
+    "fundraising": "CEO", "investors": "CEO",
 }
 
 # Content routing: whole-word matches only ("ops" must not fire inside "laptops").
+# Expanded v0.4.0 (research round): top-20 business tasks AI agent users actually
+# ask for, with multi-term scoring so "close the sales deal" beats a bare
+# "contract" mention. Ties go to the safer seat in _ROUTE_PRIORITY order.
 _ROUTE_TERMS = {
-    "CLO": r"legal|law|lawsuit|compliance|contracts?|nda|licen[sc]e[sd]?|trademark|liability|terms|regulat\w+|privacy",
-    "CFO": r"finance|financial|accounting|tax(?:es|ation)?|bookkeeping|books?|budgets?|invoices?|payroll|cash ?flow|expenses?|audit|reconcil\w+",
-    "CTO": r"technology|tech|engineering|software|security|infrastructure|database|code|api|deploy(?:ment)?|bugs?|websites?|checkout",
-    "CRO": r"revenue|sales|pipeline|leads?|prospects?|pricing|quotes?",
-    "CMO": r"marketing|brand(?:ing)?|content|campaigns?|social media|seo|launch|newsletter",
-    "Chief of Staff": r"people|hiring|hire|recruit\w*|onboarding|culture|hr|team",
-    "COO (Hermes)": r"operations?|ops|process(?:es)?|logistics|vendors?|schedule|cadence|workflows?",
-    "CEO": r"strategy|research|vision|priorities",
+    "CLO": r"legal|law|lawsuit|compliance|contracts?|nda|licen[sc]e[sd]?|trademark|liability|terms|regulat\w+|privacy|agreements?|clauses?|signatures?|copyright|patents?",
+    "CFO": r"finance|financial|accounting|tax(?:es|ation)?|bookkeeping|books?|budgets?|invoices?|payroll|cash ?flow|expenses?|audit|reconcil\w+|forecast\w*|quarters?|runway|burn rate|dashboards?|metrics|spreadsheets?|kpis?|receipts?|bank|statements?|board|q[1-4]",
+    "CTO": r"technology|tech|engineering|software|security|infrastructure|database|code|api|deploy(?:ment)?|bugs?|websites?|checkout|debugg\w*|refactor\w*|errors?|crash\w*|servers?|hosting|domains?",
+    "CRO": r"revenue|sales|pipeline|leads?|prospects?|pricing|quotes?|outreach|prospect\w*|follow[- ]ups?|proposals?|deals?|close|crm|negotiat\w*|support|tickets?|complaints?|churn",
+    "CMO": r"marketing|brand(?:ing)?|content|campaigns?|social media|seo|launch|newsletter|posts?|captions?|blogs?|ads|advertising|funnel|conversions?|landing page",
+    "Chief of Staff": r"people|hiring|hire|recruit\w*|onboarding|culture|hr|team|summar\w*|briefings?|draft|write|rewrite|proofread|email|meeting notes|action items|interviews?|candidates?|resumes?|screening|job offer",
+    "COO (Hermes)": r"operations?|ops|process(?:es)?|logistics|vendors?|schedule|cadence|workflows?|inbox|calendar|extract\w*|documents?|paperwork|monitor\w*|alerts?|sops?|projects?|timeline|deadline|checklists?|suppliers?",
+    "CEO": r"strategy|research|vision|priorities|brainstorm\w*|roadmap|goals?|fundrais\w*|investors?|pitch|term sheet|cap table|funding|venture|mission",
 }
 _ROUTE_PRIORITY = ["CLO", "CFO", "CTO", "CRO", "CMO", "Chief of Staff", "COO (Hermes)", "CEO"]
 _ROUTE_RE = {seat: re.compile(r"\b(?:%s)\b" % terms, re.I)

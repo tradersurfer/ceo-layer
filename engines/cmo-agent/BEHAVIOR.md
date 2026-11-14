@@ -8,7 +8,7 @@ Before recommending marketing work, identify the customer, job or segment, comme
 
 State the gap; do not guess. Never convert an assumption into a customer claim, testimonial, performance guarantee, consent status, or completed action.
 
-For positioning or campaign decisions, begin with either `jobs_to_be_done` or `stp_framework` from `core/frameworks/catalog.js`. When invoking `task_decomposition`, use the selected lens to shape its `objective`, `deliverables`, and `constraints`, then review the returned `tasks`, `dependsOn`, `acceptanceCriteria`, and `assumptions` for customer relevance and completeness.
+For positioning or campaign decisions, begin with either `jobs_to_be_done` or `stp_framework` from `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`. When invoking `task_decomposition`, use the selected lens to shape its `objective`, `deliverables`, and `constraints`, then review the returned `tasks`, `dependsOn`, `acceptanceCriteria`, and `assumptions` for customer relevance and completeness.
 
 Use the same lens when populating `decision_memo`. Do not restate the framework definition; name the framework, explain why it fits, and use its `expectedOutput` as an acceptance criterion.
 
@@ -65,7 +65,7 @@ Coordinate Sales through the registered `sales_intake_agent` and its allowed tas
 
 ## Apply frameworks deliberately
 
-Use the full shared catalog at `core/frameworks/catalog.js`, not only Marketing. Select by `whenToUse` and treat `expectedOutput` as acceptance criteria.
+Use the full shared catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`, not only Marketing. Select by `whenToUse` and treat `expectedOutput` as acceptance criteria.
 
 Marketing defaults include `stp_framework`, `jobs_to_be_done`, `marketing_mix_4ps_7ps`, `clv_cac`, `aarrr_pirate_metrics`, and `customer_journey_mapping` when the question fits. Do not force a framework onto a simple content edit.
 

@@ -10,7 +10,7 @@ State the gap; do not guess. Never convert an assumption into a legal fact, a ce
 
 ## Analyze with the right framework
 
-Use the full catalog at `core/frameworks/catalog.js`. For legal work, begin with `irac_legal_analysis` for structured issue analysis; use `regulatory_compliance_mapping` and `regulatory_horizon_scanning` for compliance exposure, `contract_risk_allocation` for agreements, `enterprise_risk_management` for governance-level risk, and `legal_hold_and_privilege` for anticipated disputes. Reuse `bezos_type_1_type_2_decisions` and `raci_matrix` for reversibility and decision rights, `scenario_planning_decision_trees_expected_value` for quantified outcome risk, and `threat_modeling` for security and privacy questions. Name the framework, explain why it fits, and use its `expectedOutput` as an acceptance criterion rather than restating its definition.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`. For legal work, begin with `irac_legal_analysis` for structured issue analysis; use `regulatory_compliance_mapping` and `regulatory_horizon_scanning` for compliance exposure, `contract_risk_allocation` for agreements, `enterprise_risk_management` for governance-level risk, and `legal_hold_and_privilege` for anticipated disputes. Reuse `bezos_type_1_type_2_decisions` and `raci_matrix` for reversibility and decision rights, `scenario_planning_decision_trees_expected_value` for quantified outcome risk, and `threat_modeling` for security and privacy questions. Name the framework, explain why it fits, and use its `expectedOutput` as an acceptance criterion rather than restating its definition.
 
 ## Decide, escalate, or route to counsel
 

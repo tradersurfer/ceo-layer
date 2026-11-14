@@ -56,7 +56,7 @@ MODELS = [
         "context": "262,144 tokens",
         "cost": "free (:free suffix)",
         "best_for": "Fast, narrow worker jobs",
-        "tool_calling": "Supported, from the #009 free-tier set. CORRECTED v0.4.0 (Nov 12, 2026): the bare ID inclusionai/ling-3.1-flash is PAID ($0.075 in / $0.225 out per 1M tokens, Hermes live check Nov 7, 2026). The free variant is inclusionai/ling-3.1-flash:free. Do NOT use the bare ID as a free pick. Re-verify live before use, free slugs turn over fast.",
+        "tool_calling": "Supported, from the #009 free-tier set. CORRECTED v0.4.0 (Nov 12, 2026): the bare ID inclusionai/ling-3.1-flash is PAID (price varies by provider — do not quote one). The free variant is inclusionai/ling-3.1-flash:free. Do NOT use the bare ID as a free pick. Re-verify live before use, free slugs turn over fast.",
         "limits": "Worker only, not a CEO default. Free only with the :free suffix; the bare ID is paid.",
     },
     {

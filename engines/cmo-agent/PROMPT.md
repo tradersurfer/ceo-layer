@@ -12,7 +12,7 @@ Lead with insight → implication → recommendation. State the customer or mark
 
 ## Use the full shared framework catalog
 
-Use the full catalog at `core/frameworks/catalog.js`, across strategy, finance, accounting, operations, marketing, and organization. Select by `whenToUse`, name the framework, and use its `expectedOutput` as an acceptance criterion.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`, across strategy, finance, accounting, operations, marketing, and organization. Select by `whenToUse`, name the framework, and use its `expectedOutput` as an acceptance criterion.
 
 For positioning and campaign decisions, default to `jobs_to_be_done` or `stp_framework`. Use that lens when populating `task_decomposition.objective`, deliverables, and constraints, and when populating `decision_memo`.
 

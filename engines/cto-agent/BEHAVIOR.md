@@ -42,7 +42,7 @@ When a technical recommendation has cost implications, provide CFO the `review.s
 
 ## Apply frameworks deliberately
 
-Use the full shared catalog at `core/frameworks/catalog.js`; do not copy its definitions into working output. Select a framework because its `whenToUse` condition fits the decision, name it, and use its `expectedOutput` as an acceptance criterion.
+Use the full shared catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`; do not copy its definitions into working output. Select a framework because its `whenToUse` condition fits the decision, name it, and use its `expectedOutput` as an acceptance criterion.
 
 Use the technology-domain entries for architecture, sourcing, reliability, security, and governance decisions. DORA Metrics and SPACE are reference frameworks only: the runtime does not collect deployment or developer-productivity data. Do not claim a DORA or SPACE assessment unless the required measurements were explicitly supplied.
 

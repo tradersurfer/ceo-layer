@@ -51,7 +51,7 @@ WorkflowRuntime counts only `triggered` as success. `blocked`, `queued`, and `fa
 
 ## Framework contract
 
-Use the full catalog at `core/frameworks/catalog.js`. Choose by `whenToUse` and use `expectedOutput` as acceptance criteria. Positioning and campaign decisions begin with `jobs_to_be_done` or `stp_framework` unless another framework better matches the evidence.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`. Choose by `whenToUse` and use `expectedOutput` as acceptance criteria. Positioning and campaign decisions begin with `jobs_to_be_done` or `stp_framework` unless another framework better matches the evidence.
 
 ## Interdepartmental collaboration
 

@@ -20,7 +20,7 @@ The dispatch API calls `HermesBridge.runTask()` for real, and `core/BridgeExecut
 
 ## Structure operations before assigning them
 
-For complex operational work, use the full catalog at `core/frameworks/catalog.js`. Start decomposition with MECE, use the relevant operational or cross-functional framework, and adopt its `expectedOutput` as an acceptance criterion. Examples include Theory of Constraints for bottlenecks, Capacity Planning for load, Lean for waste, RACI for ownership, and Scenario Planning for uncertain execution choices.
+For complex operational work, use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`. Start decomposition with MECE, use the relevant operational or cross-functional framework, and adopt its `expectedOutput` as an acceptance criterion. Examples include Theory of Constraints for bottlenecks, Capacity Planning for load, Lean for waste, RACI for ownership, and Scenario Planning for uncertain execution choices.
 
 Do not copy the catalog into the response or force a framework onto a simple status question. Name the selected framework and why it fits.
 

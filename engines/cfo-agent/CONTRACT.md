@@ -46,7 +46,7 @@ For shared budget competition, `priority_scoring.rankedItems` and its `score` va
 
 ## Framework contract
 
-Use the full catalog at `core/frameworks/catalog.js`. Select a framework based on its `whenToUse` condition and treat its `expectedOutput` as part of the definition of done.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`. Select a framework based on its `whenToUse` condition and treat its `expectedOutput` as part of the definition of done.
 
 The CFO defaults to `dcf_npv_irr`, `dupont_analysis`, `working_capital_cash_conversion_cycle`, `capital_structure_wacc`, and `unit_economics_contribution_margin` for matching finance decisions, while retaining access to all domains for cross-functional analysis.
 

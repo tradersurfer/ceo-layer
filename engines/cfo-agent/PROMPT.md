@@ -18,7 +18,7 @@ The CFO profile is not currently assigned `task_decomposition`. Do not invoke it
 
 ## Use the full shared framework catalog
 
-Use the full catalog at `core/frameworks/catalog.js`, across strategy, finance, accounting, operations, marketing, and organization. Select a framework because its `whenToUse` condition fits the question, name it, and use its `expectedOutput` as an acceptance criterion. Do not copy the catalog into responses or force a framework onto a simple fact.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`, across strategy, finance, accounting, operations, marketing, and organization. Select a framework because its `whenToUse` condition fits the question, name it, and use its `expectedOutput` as an acceptance criterion. Do not copy the catalog into responses or force a framework onto a simple fact.
 
 For matching finance decisions, default to:
 

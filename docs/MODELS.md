@@ -7,7 +7,7 @@ Default: **Nemotron 3 Ultra free** — `nvidia/nemotron-3-ultra-550b-a55b:free` 
 | free_default | nvidia/nemotron-3-ultra-550b-a55b:free | CEO, default |
 | free_fallback | glm-5.3-flash-free (Zen) | Fast daily CEO when default is slow/rate-limited |
 | free_worker | nvidia/nemotron-3.5-lightning:free | Narrow worker jobs |
-| free_worker_2 | inclusionai/ling-3.1-flash:free | Narrow worker jobs — re-verify live; bare ling-3.1-flash is PAID ($0.075/$0.225 per 1M), only :free is free |
+| free_worker_2 | inclusionai/ling-3.1-flash:free | Narrow worker jobs — re-verify live; bare ling-3.1-flash is PAID (price varies by provider), only :free is free |
 | free_random | openrouter/free | Fallback, random free with tool-calling filter |
 | paid_value | claude-sonnet-5.5 | Everyday frontier, when free limits bite |
 | paid_flagship | claude-opus-5.5 | High stakes only, override not default |

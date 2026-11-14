@@ -46,7 +46,7 @@ CLO is **not** assigned `task_decomposition`, `delegation_brief`, `department_ca
 
 ## Framework contract
 
-Use the full catalog at `core/frameworks/catalog.js`. Choose by `whenToUse` and use `expectedOutput` as acceptance criteria. Legal and compliance work begins with `irac_legal_analysis`, `regulatory_compliance_mapping`, `regulatory_horizon_scanning`, `contract_risk_allocation`, `enterprise_risk_management`, or `legal_hold_and_privilege` unless another framework better matches, and reuses `bezos_type_1_type_2_decisions`, `raci_matrix`, `scenario_planning_decision_trees_expected_value`, and `threat_modeling` where they fit. These are reasoning lenses, not live systems.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`. Choose by `whenToUse` and use `expectedOutput` as acceptance criteria. Legal and compliance work begins with `irac_legal_analysis`, `regulatory_compliance_mapping`, `regulatory_horizon_scanning`, `contract_risk_allocation`, `enterprise_risk_management`, or `legal_hold_and_privilege` unless another framework better matches, and reuses `bezos_type_1_type_2_decisions`, `raci_matrix`, `scenario_planning_decision_trees_expected_value`, and `threat_modeling` where they fit. These are reasoning lenses, not live systems.
 
 ## Dispute Agent bridge contract
 

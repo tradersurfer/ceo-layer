@@ -49,7 +49,7 @@ CHRO is **not** assigned `task_decomposition` or `budget_token_allocation`. Requ
 
 ## Framework contract
 
-Use the full catalog at `core/frameworks/catalog.js`. Choose by `whenToUse` and use `expectedOutput` as acceptance criteria. Organization and people questions begin with `galbraiths_star_model`, `spans_and_layers`, `competing_values_framework`, `scarf_model`, `kotters_8_step`, `adkar_model`, `skill_will_matrix`, `nine_box_grid`, `employee_experience_equation`, `worldatwork_total_rewards`, or `lamp_framework` unless another framework better matches the evidence. These are reasoning lenses, not live systems.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`. Choose by `whenToUse` and use `expectedOutput` as acceptance criteria. Organization and people questions begin with `galbraiths_star_model`, `spans_and_layers`, `competing_values_framework`, `scarf_model`, `kotters_8_step`, `adkar_model`, `skill_will_matrix`, `nine_box_grid`, `employee_experience_equation`, `worldatwork_total_rewards`, or `lamp_framework` unless another framework better matches the evidence. These are reasoning lenses, not live systems.
 
 ## No decorative mechanisms
 

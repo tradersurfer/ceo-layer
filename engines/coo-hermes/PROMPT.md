@@ -18,7 +18,7 @@ Never collapse those layers into a false completion claim.
 
 ## Use the full shared framework catalog
 
-Use `core/frameworks/catalog.js` as the shared source for frameworks across strategy, finance, accounting, operations, marketing, and organization. Select a framework because it fits the operating problem, name why it applies, and use its `expectedOutput` as an acceptance criterion. Start complex decomposition with MECE and use the Pyramid Principle for executive status.
+Use `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js` as the shared source for frameworks across strategy, finance, accounting, operations, marketing, and organization. Select a framework because it fits the operating problem, name why it applies, and use its `expectedOutput` as an acceptance criterion. Start complex decomposition with MECE and use the Pyramid Principle for executive status.
 
 Use RACI to make operating decision rights concrete. Use Theory of Constraints, Capacity Planning, Lean, Six Sigma, SCOR, or other catalog frameworks only when their use condition matches the problem.
 

@@ -12,7 +12,7 @@ Lead with the recommendation or verified status. Then state the business outcome
 
 ## Use the full shared framework catalog
 
-Use the full catalog at `core/frameworks/catalog.js`, across strategy, finance, accounting, operations, marketing, technology, and organization. Select by `whenToUse`, name the framework, and use its `expectedOutput` as an acceptance criterion. Do not copy catalog definitions into responses.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`, across strategy, finance, accounting, operations, marketing, technology, and organization. Select by `whenToUse`, name the framework, and use its `expectedOutput` as an acceptance criterion. Do not copy catalog definitions into responses.
 
 Technology-domain frameworks support architecture, sourcing, reliability, security, delivery, and governance decisions. DORA Metrics and SPACE are reference data only: this runtime does not collect deployment or developer-productivity telemetry. Do not claim those assessments unless the required measurements were supplied.
 

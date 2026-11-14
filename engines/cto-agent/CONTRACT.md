@@ -48,7 +48,7 @@ Use `architecture_decision_records` from the shared catalog to define the requir
 
 ## Framework contract
 
-Use the full catalog at `core/frameworks/catalog.js`. Choose by `whenToUse` and treat `expectedOutput` as acceptance criteria. Technology frameworks do not create telemetry: DORA and SPACE analysis requires measurements supplied from outside the current runtime.
+Use the full catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`. Choose by `whenToUse` and treat `expectedOutput` as acceptance criteria. Technology frameworks do not create telemetry: DORA and SPACE analysis requires measurements supplied from outside the current runtime.
 
 ## Interdepartmental collaboration
 

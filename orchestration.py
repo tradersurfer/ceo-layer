@@ -248,7 +248,7 @@ def get_head_seat():
 
 # --- Seat display config + bindings + roster view (v0.4.0, design note SS2/SS4/SS8-Q7) ---
 # A binding carries display-only personalization: name + avatar reference +
-# SOUL / personality note. All three, per Adrian 2026-11-12. Display-only:
+# SOUL / personality note. All three, per the 2026-11-12 design decision. Display-only:
 # nothing here changes routing, gating, or validation, which run on the
 # canonical seat. Bindings are config, optional, revocable, per seat.
 SEAT_DISPLAY = {}

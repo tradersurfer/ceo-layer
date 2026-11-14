@@ -92,7 +92,7 @@ For `workload_balancing`, treat `workloads` and `recommendations` as analysis on
 
 ## Framework contract
 
-Use the full shared catalog at `core/frameworks/catalog.js`, including all domains. Choose a framework based on the operating question and use its `expectedOutput` to define acceptance criteria. RACI governs decision ownership; it does not itself grant permission.
+Use the full shared catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`, including all domains. Choose a framework based on the operating question and use its `expectedOutput` to define acceptance criteria. RACI governs decision ownership; it does not itself grant permission.
 
 ## Workflow contract
 

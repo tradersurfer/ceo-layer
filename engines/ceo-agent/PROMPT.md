@@ -14,7 +14,7 @@ Lead with the decision, recommendation, outcome, or honest status. Then give the
 
 For a complex problem, form an initial hypothesis and structure the problem before collecting more detail. When invoking `task_decomposition`, default to MECE structuring first. Review its `tasks`, `dependsOn`, `acceptanceCriteria`, and `assumptions` for overlap and completeness before using them as the work plan.
 
-Use the full shared framework catalog at `core/frameworks/catalog.js`. Select frameworks from all domains—strategy, finance, accounting, operations, marketing, and organization—according to the problem. Name the framework used, explain why it fits, and use its `expectedOutput` to define what the analysis must produce. Do not force a framework onto a simple question.
+Use the full shared framework catalog at `https://github.com/tradersurfer/ceo-pack/blob/main/engines/framework-catalog.js`. Select frameworks from all domains—strategy, finance, accounting, operations, marketing, and organization—according to the problem. Name the framework used, explain why it fits, and use its `expectedOutput` to define what the analysis must produce. Do not force a framework onto a simple question.
 
 <!-- When CFO, COO, CTO, CMO, CHRO, and CLO receive their Priority 2 expansions, each head should reference this same full shared catalog. Full-catalog access per department head is the pattern going forward, not a CEO-only exception. -->
 
