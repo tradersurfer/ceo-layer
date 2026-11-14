@@ -35,9 +35,9 @@ Slash commands: `/ceo`, `/q4`, and `/orchestrate`, plus v0.4.0 shortcuts `/brief
 - **Opt-in business-data reading:** `create_business_data_opt_in` makes an ephemeral, chat-scoped opt-in naming exact fields, a purpose, and an expiry. Every read is audited, revoke is instant, and a fresh opt-in is required for any future read. Fictional-data test only.
 - **Hardened router and verifier:** see CHANGELOG.md. The Hermes live-test P0s are fixed — whole-word matching with per-seat priority, matched terms, also-consult, and confidence. The router is expanded from the top-20 business tasks AI agent users actually ask for (writing, coding, deals, support, forecasting, fundraising, and more): 37 domains, roughly 3x the terms, with multi-term scoring so a deal mention beats a bare contract mention. 104 tests total, 20/20 back-to-back, Nous validator 15/15, no warnings.
 
-## Model choice — free default, top-ranked options
+## Model choice — your Hermes model runs, the plugin recommends
 
-Default is free, and the user can choose from the list in `models.py` / `docs/MODELS.md`:
+The agent runs on whatever model you already selected in Hermes — the plugin never switches it. `ceo_choose_model` recommends the best pick for the job (CEO work, worker jobs, high stakes) from the list in `models.py` / `docs/MODELS.md`, and the free lineup is the recommendation when cost matters:
 
 | Choice | Use for |
 |---|---|
@@ -48,7 +48,7 @@ Default is free, and the user can choose from the list in `models.py` / `docs/MO
 | Claude Sonnet 5.5 / GPT-6.1 Sol | Paid value, everyday frontier |
 | Claude Opus 5.5 | Paid flagship, high stakes only — override, not default |
 
-Free caveat, up front: OpenRouter free is 20 req/min, 50 req/day until $10 of credits, then 1,000/day, and a CEO task uses many requests. Free lineups turn over fast — verify the live provider list before a demo. The plugin returns the choice and IDs; it does not call a model itself, so it stays stdlib-only and catalog-safe.
+Free caveat, up front: OpenRouter free is 20 req/min, 50 req/day until $10 of credits, then 1,000/day, and a CEO task uses many requests. Free lineups turn over fast — verify the live provider list before a demo. The plugin returns the recommendation and IDs; it does not call a model itself, so it stays stdlib-only and catalog-safe.
 
 Seats: CEO, CFO, COO (Hermes), CTO, CMO, CLO, Chief of Staff, CRO.
 
