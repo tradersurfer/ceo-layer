@@ -10,7 +10,7 @@ A CEO orchestration layer for Hermes — not a chat wrapper. Install it, name yo
 
 - `ceo_orchestrate` — ordered plan for a goal, with seat, tool, arguments, and approval flag per step. 6 steps normally, 7 with the Q4 checklist for Q4 / year-end / tax goals.
 - `ceo_tool_call` — validate a tool-call envelope before dispatch: exact tool name, JSON arguments, no credential keys or values (nested included), required fields, approval flag. Unknown tools and credential content are refused, and secret values are never echoed — only their path is named.
-- `ceo_verify` — **new in v0.3.0.** Verify a tool result before reporting the step as done: status, expected fields, and next action (verify, retry once, stop and wait for the owner, or escalate). Unknown is never success, and a validated envelope is not a completed call. The `post_tool_call` hook also runs verification on every `ceo_*` result.
+- `ceo_verify` — Verify a tool result before reporting the step as done: status, expected fields, and next action (verify, retry once, stop and wait for the owner, or escalate). Unknown is never success, and a validated envelope is not a completed call. The `post_tool_call` hook also runs verification on every `ceo_*` result.
 - `ceo_brief` — one-page brief: goal, decision needed, owners per workstream.
 - `ceo_route` — route a task to the right seat by domain. Returns `COO (Hermes)` for Hermes; the orchestration layer canonicalizes that to `COO`.
 - `ceo_assign` — one task, one owner, one ISO due date, one known seat. Missing fields, bad dates, and unknown seats are errors, not silent defaults. A past due date warns.
@@ -33,7 +33,7 @@ Slash commands: `/ceo`, `/q4`, and `/orchestrate`, plus v0.4.0 shortcuts `/brief
 - **Head CEO:** `head_seat` config (default CEO) picks the seat that holds priorities and the decision log; `head_profile` optionally binds a Hermes profile to it. The human owner is still the final Type 1 gate.
 - **Capability check:** each seat has a checklist in `orchestration.py`. `check_capabilities` lists what a bound profile is missing; `propose_capability_install` returns an owner-gated install plan. Declining leaves a name-only binding, flagged in plan and log.
 - **Opt-in business-data reading:** `create_business_data_opt_in` makes an ephemeral, chat-scoped opt-in naming exact fields, a purpose, and an expiry. Every read is audited, revoke is instant, and a fresh opt-in is required for any future read. Fictional-data test only.
-- **Hardened router and verifier:** see CHANGELOG.md. The Hermes live-test P0s are fixed and covered by 38 new tests in `tests/test_v040.py`.
+- **Hardened router and verifier:** see CHANGELOG.md. The Hermes live-test P0s are fixed — whole-word matching with per-seat priority, matched terms, also-consult, and confidence. The router is expanded from the top-20 business tasks AI agent users actually ask for (writing, coding, deals, support, forecasting, fundraising, and more): 37 domains, roughly 3x the terms, with multi-term scoring so a deal mention beats a bare contract mention. 104 tests total, 20/20 back-to-back, Nous validator 15/15, no warnings.
 
 ## Model choice — free default, top-ranked options
 
@@ -65,7 +65,7 @@ hermes plugins doctor ~/.hermes/plugins/ceo-pack --ci
 hermes plugins validate ~/.hermes/plugins/ceo-pack --install-deps
 ```
 
-## Demo path (for the hackathon video)
+## Demo path
 
 1. Install by name.
 2. Ask for a Q4 closeout brief.
